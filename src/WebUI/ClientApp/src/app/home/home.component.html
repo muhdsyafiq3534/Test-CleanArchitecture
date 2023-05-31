@@ -1,14 +1,128 @@
-<h1>Hello, world!</h1>
-<p>Welcome to your new single-page application, built with:</p>
-<ul>
-  <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-  <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>
-  <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-</ul>
-<p>To help you get started, we've also set up:</p>
-<ul>
-  <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-  <li><strong>Angular CLI integration</strong>. In development mode, there's no need to run <code>ng serve</code>. It runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-  <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration automatically invokes <code>ng build</code> to produce minified, ahead-of-time compiled JavaScript files.</li>
-</ul>
-<p>The <code>ClientApp</code> subdirectory is a standard Angular CLI application. If you open a command prompt in that directory, you can run any <code>ng</code> command (e.g., <code>ng test</code>), or use <code>npm</code> to install extra packages into it.</p>
+<div>
+  <mat-grid-list cols="1" rowHeight="4:2">
+
+    <mat-grid-tile>
+      <table mat-table [dataSource]="Odd">
+
+        <ng-container matColumnDef="UserId">
+          <th mat-header-cell *matHeaderCellDef> UserId </th>
+          <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Surname">
+          <th mat-header-cell *matHeaderCellDef> Surname </th>
+          <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="GivenName">
+          <th mat-header-cell *matHeaderCellDef> GivenName </th>
+          <td mat-cell *matCellDef="let element"> {{element.givenName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ContactNo">
+          <th mat-header-cell *matHeaderCellDef> ContactNo </th>
+          <td mat-cell *matCellDef="let element"> {{element.contactNo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Address">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Col_1">
+          <th mat-header-cell *matHeaderCellDef> Col_1 </th>
+          <td mat-cell *matCellDef="let element"> {{element.col_1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="NoOfMember">
+          <th mat-header-cell *matHeaderCellDef> NoOfMember </th>
+          <td mat-cell *matCellDef="let element"> {{element.noOfMember
+            }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ExpenseMonth1">
+          <th mat-header-cell *matHeaderCellDef> ExpenseMonth1 </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseMonth1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ExpenseMonth2">
+          <th mat-header-cell *matHeaderCellDef> ExpenseMonth2 </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseMonth2}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ExpenseMonth3">
+          <th mat-header-cell *matHeaderCellDef> ExpenseMonth3 </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseMonth3}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <table mat-table [dataSource]="Even">
+
+        <ng-container matColumnDef="UserId">
+          <th mat-header-cell *matHeaderCellDef> UserId </th>
+          <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Surname">
+          <th mat-header-cell *matHeaderCellDef> Surname </th>
+          <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="GivenName">
+          <th mat-header-cell *matHeaderCellDef> GivenName </th>
+          <td mat-cell *matCellDef="let element"> {{element.givenName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ContactNo">
+          <th mat-header-cell *matHeaderCellDef> ContactNo </th>
+          <td mat-cell *matCellDef="let element"> {{element.contactNo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Address">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Col_1">
+          <th mat-header-cell *matHeaderCellDef> Col_1 </th>
+          <td mat-cell *matCellDef="let element"> {{element.col_1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="NoOfMember">
+          <th mat-header-cell *matHeaderCellDef> NoOfMember </th>
+          <td mat-cell *matCellDef="let element"> {{element.noOfMember
+            }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ExpenseMonth1">
+          <th mat-header-cell *matHeaderCellDef> ExpenseMonth1 </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseMonth1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ExpenseMonth2">
+          <th mat-header-cell *matHeaderCellDef> ExpenseMonth2 </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseMonth2}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ExpenseMonth3">
+          <th mat-header-cell *matHeaderCellDef> ExpenseMonth3 </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseMonth3}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </mat-grid-tile>
+
+
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>5</mat-grid-tile>
+  </mat-grid-list>
+</div>

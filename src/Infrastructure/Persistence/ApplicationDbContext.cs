@@ -27,9 +27,9 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
         _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
     }
 
-    public DbSet<TodoList> TodoLists => Set<TodoList>();
-
-    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
+    public DbSet<Table1> Table1 { get; set; }
+    public DbSet<Table2> Table2 { get; set; }
+    public DbSet<Table3> Table3 { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

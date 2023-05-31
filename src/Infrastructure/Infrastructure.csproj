@@ -21,4 +21,9 @@
         <ProjectReference Include="..\Application\Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Files\" />
+      <Folder Include="Persistence\Configurations\" />
+    </ItemGroup>
+
 </Project>
