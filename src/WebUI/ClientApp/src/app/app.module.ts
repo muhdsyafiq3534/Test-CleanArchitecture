@@ -13,14 +13,24 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { ChartJSComponent } from './module/ChartJS/ChartJS.component';
+import { AmchartComponent } from './module/Amchart/Amchart.component';
+import { AngularMaterialComponent } from './module/AngularMaterial/AngularMaterial.component';
+import { TableComponent } from './module/AngularMaterial/component/table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    TokenComponent
+    TokenComponent,
+    ChartJSComponent,
+    AmchartComponent,
+    AngularMaterialComponent,
+    TableComponent,
+    AmchartComponent
   ],
+
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
